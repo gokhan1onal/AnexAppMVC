@@ -1,0 +1,40 @@
+﻿@using AnexAppMVC.Models
+@model List<ReservationModel>
+@{
+    ViewBag.Title = "Anex Tour MVC App";
+}
+
+<h2>Anex Tour Reservation(s)</h2>
+
+<table id="dtReservations" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th nowrap="nowrap">Hotel ID</th>
+            <th nowrap="nowrap">Hotel Name</th>
+            <th>Date</th>
+            <th nowrap="nowrap">Total Pax</th>
+            <th>Reservation Number(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+            {
+            <tr>
+                <td>@obj.Id</td>
+                <td>@obj.HotelId</td>
+                <td>@obj.HotelName</td>
+                <td>@obj.Date</td>
+                <td>@obj.TotalPax</td>
+                <td>@obj.ReservationNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
